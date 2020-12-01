@@ -9,6 +9,11 @@ def prob(n):
         a = (365 - i) / 365
         c *= a
     return 1 - c
-
-x = prob(int(input()))
-print('%.100f'%x)
+#looping till there is no input
+while True:
+        try:
+            x = prob(int(input()))
+            print('%.100f'%x)
+        #to avoid error message in online compilers
+        except EOFError:
+            break
